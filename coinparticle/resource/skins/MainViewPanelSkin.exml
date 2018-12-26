@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainViewPanelSkin" width="1280" height="720" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="winIn">
+			<tween:TweenItem target="{imgwin}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0.2}" scaleY="{0.2}" alpha="{0.1}" />
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{1}" scaleX="{1.2}" scaleY="{1.2}" />
+					</tween:props>
+				</tween:To>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object scaleX="{0.95}" scaleY="{0.95}" />
+					</tween:props>
+				</tween:To>
+				<tween:Wait duration="50" />
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}" />
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="winout">
+			<tween:TweenItem target="{imgwin}">
+				<tween:Set/>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object scaleX="{1.2}" scaleY="{1.2}" />
+					</tween:props>
+				</tween:To>
+				<tween:To duration="200">
+					<tween:props>
+						<e:Object scaleX="{0.2}" scaleY="{0.2}" alpha="{0.1}" />
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="1" fillColor="0x253e4c" />
+	<e:Button id="btn_effect1" label="effect1" x="50" y="642" />
+	<e:Button id="btn_effect2" label="effect2" x="171" y="642" />
+	<e:Image id="imgwin" source="win_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>
